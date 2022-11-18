@@ -1,0 +1,32 @@
+---
+title: 'MATH 437 HW5'
+author: "Drew Remmenga"
+output:
+  pdf_document: default
+  html_notebook: default
+---
+```{r}
+library(MASS)
+library(ggplot2)
+hmk6q1 <- read.csv("~/School/Math437/HW6/hmk6q1.txt", sep="")
+hmk6q1test <- read.csv("~/School/Math437/HW6/hmk6q1test.txt", sep="")
+linear=lda(C~x1+x2,data=hmk6q1)
+```
+```{r}
+x=seq(from=-1,length.out=100,to=1)
+y=seq(from=-.5,length.out=100,to=.5)
+s=1-abs(x)
+p=1-abs(y-.5)
+plot(x,s)
+points(y,p)
+```
+.5 and .5
+.2 and .8
+```{r}
+p=c(.2,.2,.3,.3)
+f=c(.3,.36,.8,.7)
+f*p
+```
+3
+\newline
+2
